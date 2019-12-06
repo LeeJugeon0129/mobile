@@ -9,8 +9,24 @@
     text-align: center;
     font-size: 30px;
 }
+.cal_mid{
+    text-align: center;
+    
+    width: 100%;
+}
 .cal{
-    text-align: center;    
+    text-align: center;
+    width: 70%;
+    float: left;
+    box-sizing: border-box;
+
+}
+.friends{
+    text-align: center;
+    width: 30%;
+    float: right;
+    box-sizing: border-box;
+        
 }
 
 table.calendar{
@@ -22,6 +38,12 @@ table.friends{
     border: 1px solid black;
     display: inline-table;
     text-align: center;
+    width: 100%;
+    border: 1px solid #444444;
+    border-collapse: collapse;
+}
+table.friends th, td{
+    border: 1px solid #444444;
 }
 table.calendar td{
     vertical-align: top;
@@ -38,8 +60,9 @@ table.calendar td{
         <a href="#" id="moveNextMonth"><span id="nextMonth" class="cal_tit">&gt;</span></a>
 
     </div>
-    <div id="cal_tab" class="cal">
-    <div id="cal_tab2" class="friends">
+    <div class="cal_mid">
+        <span id="cal_tab" class="cal"></span>
+        <span id="cal_tab2" class="friends"></span>
     </div>
  
 <script type="text/javascript">
@@ -87,6 +110,11 @@ table.calendar td{
         setListHTML+='<table clas="friends">';
         setListHTML+='<tr><th>Friends List</th></tr>';
         for(var i=0; i<1;i++){
+            setListHTML+='<tr>';
+            
+            setListHTML+='<td>이주건</td>';
+
+            setListHTML+='</tr>';
             setListHTML+='<tr>';
             
             setListHTML+='<td>이주건</td>';
